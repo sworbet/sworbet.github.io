@@ -115,7 +115,7 @@ audio.loop = true;
 audio.play();*/
 
 
-/* Google Analytics */
+
 /* Google Analytics */
 var lockID = LoadScreen.lock(); // Lock loading screen
 importScripts('https://www.googletagmanager.com/gtag/js?id=UA-194445441-1')
@@ -128,7 +128,7 @@ importScripts('https://www.googletagmanager.com/gtag/js?id=UA-194445441-1')
 		gtag('config', 'UA-194445441-1');
 		$(document).on('click', 'a[data-passage]', function () {
 			gtag('event', 'Navigation', {
-				event_label    : $(this).attr('data-passage'),
+				event_label    : event.passage.title,
 				event_category : 'GuestClick'
 			});
 		});
@@ -141,7 +141,7 @@ importScripts('https://www.googletagmanager.com/gtag/js?id=UA-194445441-1')
 		console.warn('Could not load "gtag" library.');
 		LoadScreen.unlock(lockID); // Unlock loading screen
 	});
-</script><tw-passagedata pid="1" name="Welcome to Wightwhisper" tags="" position="97,298" size="100,100">
+</script><tw-passagedata pid="1" name="Welcome to Wightwhisper" tags="Hello" position="97,298" size="100,100">
 
 Wightwhisper is a choose-your-own adventure fantasy style story taking place in the magical world of Esereale. This story is written and worked upon by Monika Yosifova for the 2021&#39;Capstone Course, in order to explore the power of words in games. She hopes you enjoy your stay!
 
