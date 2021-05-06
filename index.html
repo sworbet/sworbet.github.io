@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html data-init="no-js">
 <head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-194445441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-194445441-1');
+</script>
+
+
+
 <meta charset="UTF-8" />
 <title>Wightwhisper Prologue</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -107,30 +121,6 @@ audio.play();*/
 
 
 /* Google Analytics */
-<<head>>var lockID = LoadScreen.lock(); // Lock loading screen
-importScripts('https://www.googletagmanager.com/gtag/js?id=UA-194445441-1')
-	.then(function () {
-		window.dataLayer = window.dataLayer || [];
-		window.gtag = function () {
-			dataLayer.push(arguments);
-		};
-		gtag('js', new Date());
-		gtag('config', 'UA-194445441-1');
-		$(document).on('click', 'a[data-passage]', function () {
-			gtag('event', 'Navigation', {
-				event_label    : $(this).attr('data-passage'),
-				event_category : 'GuestClick'
-			});
-		});
-		if (State.size > 0) {
-			Engine.show();
-		}
-		LoadScreen.unlock(lockID); // Unlock loading screen
-	})
-	.catch(function (error) {
-		console.warn('Could not load "gtag" library.');
-		LoadScreen.unlock(lockID); // Unlock loading screen
-	});<<head>>
 </script><tw-passagedata pid="1" name="Welcome to Wightwhisper" tags="" position="97,298" size="100,100">
 
 Wightwhisper is a choose-your-own adventure fantasy style story taking place in the magical world of Esereale. This story is written and worked upon by Monika Yosifova for the 2021&#39;Capstone Course, in order to explore the power of words in games. She hopes you enjoy your stay!
