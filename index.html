@@ -128,7 +128,7 @@ importScripts('https://www.googletagmanager.com/gtag/js?id=UA-194445441-1')
 		gtag('config', 'UA-194445441-1');
 		$(document).on('click', 'a[data-passage]', function () {
 			gtag('event', 'Navigation', {
-				event_label    : event.passage.title,
+				event_label    : $(this).attr('data-passage'),
 				event_category : 'GuestClick'
 			});
 		});
